@@ -15,7 +15,7 @@ dotenv.config({
 const app=express();
 
 const port=3000;
-const mongoUrl="mongodb://127.0.0.1/businessManagement";
+const mongoUrl=process.env.MONGO_URL;
 app.use(cors());
 app.use(express.json())
 
