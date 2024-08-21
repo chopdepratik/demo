@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:3000/api/v1/business';
-const API_URL2 = 'http://localhost:3000/api/v2/business'; // Update with your backend URL
-const API_URL3 = 'http://locolhost:3000/api/v3/business'
+const API_URL = 'https://management-o5hr.onrender.com';
+const API_URL2 = 'https://management-o5hr.onrender.com'; // Update with your backend URL
+const API_URL3 = 'https://management-o5hr.onrender.com'
 
 // Register a new user
 export const registerUser = async (userData) => {
@@ -23,7 +23,7 @@ export const registeremp = async (empData) => {
   };
   export const registerTask = async (taskData) => {
     try {
-      const response = await axios.post('http://localhost:3000/api/v3/business/registertask', taskData);
+      const response = await axios.post('https://management-o5hr.onrender.com/registertask', taskData);
       return response.data;
     } catch (error) {
       throw error.response.data; // Throw the actual error response for debugging
@@ -31,7 +31,7 @@ export const registeremp = async (empData) => {
   };
 
 export const registerProject= async (taskData) => {
-  const response = await axios.post('http://localhost:3000/api/v3/business/registerproject', taskData);
+  const response = await axios.post('https://management-o5hr.onrender.com/registerproject', taskData);
   return response.data;
 };
 // Login user
