@@ -18,8 +18,11 @@ const port = process.env.PORT || 3000;
 const mongoUrl = process.env.MONGO_URL;
 
 app.use(cors({
-  origin: 'https://bmanagement.netlify.app/' // Replace with your Netlify URL
+  origin: 'https://bmanagement.netlify.app',
+  methods: 'GET,POST,PUT,DELETE',
+  credentials: true
 }));
+
 app.use(express.json());
 
 app.use("/api/v1/business", router);
